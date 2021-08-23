@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* *: 모든 태그 */
+/* *(전체 선택자): 페이지 내의 모든 요소들 선택 */
 * {
-    margin: 0;  /* margin, padding: 여백 */
+    margin: 0;  /* margin, padding: 여백(x) */
     padding: 0;
-    color: grey;
+    color: grey; /* 콘텐츠 색: grey */
 }
