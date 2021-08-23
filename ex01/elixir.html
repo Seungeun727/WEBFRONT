@@ -6,6 +6,7 @@
         content="text/html; charset=UTF-8">
     
     <title>Bit Lounge 건강음료</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
@@ -15,7 +16,7 @@
 
     <!-- 메뉴-->
     <nav>
-      <ul><!-- 순서가 없는 리스트-->
+      <ul class="menu"><!-- 순서가 없는 리스트-->
         <li><a href="#green">Green</a></li> <!-- * id 참조 하는 경우 #을 붙임-->
         <li><a href="#blue">Blue</a></li>
         <li><a href="#purple">Purple</a></li>
@@ -25,7 +26,10 @@
 
     <!-- 실질 컨텐츠 -->
     <article>
-      <section id="green">  
+      <div class="seller">
+          <img src="./imgages/Penguins.jpg" alt="펭귄" />
+      </div>
+      <section id="green" class="green beverage">  
         <!-- id를 참조를 하고 싶은 경우: #을 붙인다. -->
         <!-- 구체적으로 하고 싶을 때 section#green-->
         <div> 
@@ -45,7 +49,7 @@
         </div>
       </section>
 
-      <section id="blue">
+      <section id="blue" class="blue beverage">
        <div>
         <h2>Raspberry Ice Concentration</h2>
         <img src="images/lightblue.jpg"
@@ -55,7 +59,7 @@
         </div>
       </section>
 
-      <section id="purple">
+      <section id="purple" class="purple beverage">
         <div>
           <h2>Blueberry Bliss Elixir</h2>
           <img src="images/blue.jpg"
@@ -65,7 +69,7 @@
         </div>
       </section>
 
-      <section id="red">
+      <section id="red" class="red beverage">
         <div>
         <h2>Cranberry Antioxidant Blast</h2> 
           <img src="images/red.jpg"

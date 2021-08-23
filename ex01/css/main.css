@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* *: 모든 태그 */
+* {
+    margin: 0;  /* margin, padding: 여백 */
+    padding: 0;
+    color: grey;
+}
