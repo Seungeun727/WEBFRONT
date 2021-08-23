@@ -7,6 +7,43 @@
     
     <title>Bit Lounge 건강음료</title>
     <link rel="stylesheet" href="./css/style.css" />
+  <style>
+      /* id 셀렉터: #아이디 */
+      #green { /* id가 green인 요소 */
+        color: green;
+      }
+
+      #blue {
+        color: blue;
+      }
+
+      #purple {
+        color:purple;
+      }
+      
+      #red {
+        color:red;
+      }
+      
+      /* class 셀렉터:
+        .클래스명 */
+        .beverage.green {
+          background-color: rgba(0, 255, 0, 0.1);
+        }
+
+        .beverage.blue {
+          background-color: rgba(0, 0 , 255, 0.1);
+        }
+
+        .beverage.purple {
+          background-color: rgba(128, 0, 128, 0.1);
+        }
+
+        .beverage.red {
+          background-color: rgba(255, 0, 0, 0.1);
+        }
+
+  </style>
   </head>
 
   <body>
@@ -27,7 +64,7 @@
     <!-- 실질 컨텐츠 -->
     <article>
       <div class="seller">
-          <img src="./imgages/Penguins.jpg" alt="펭귄" />
+          <img src="./images/Penguins.jpg" alt="펭귄" />
       </div>
       <section id="green" class="green beverage">  
         <!-- id를 참조를 하고 싶은 경우: #을 붙인다. -->
@@ -58,7 +95,7 @@
         <p>Combining raspberry juice with lemon grass, citrus peel and rosehips, this icy drink will make your mind feel clear and crisp.</p>
         </div>
       </section>
-      
+
       <section id="purple" class="purple beverage">
         <div>
           <h2>Blueberry Bliss Elixir</h2>
