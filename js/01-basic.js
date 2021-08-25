@@ -61,4 +61,3 @@ console.log(v, "=>", typeof v);
 // 다른 데이터 타입 할당
 v = 2021;
 console.log(v, "=>", typeof v);
-
