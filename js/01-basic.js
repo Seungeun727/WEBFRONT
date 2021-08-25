@@ -53,7 +53,7 @@ console.log("Test_CONST:", TEST_CONST);
 
 console.log("----------");
 // JavaScript는 동적 타입 언어
-//        데이터 타입이 고정되지 않았고
+//     데이터 타입이 고정되지 않았고
 //     데이터가 할당 되었을 때, 그 타입이 결정
 let v = "This is String";
 // 데이터 타입을 체크해야 한다.
@@ -61,3 +61,4 @@ console.log(v, "=>", typeof v);
 // 다른 데이터 타입 할당
 v = 2021;
 console.log(v, "=>", typeof v);
+
