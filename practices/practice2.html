@@ -5,16 +5,43 @@
 <title>리스트 정의하기</title>
 <style type="text/css">
 
+	body {
+		font-family: 맑은 고딕, 돋움;
+  	font-size: 0.75em;
+		color: #333;
+	}
+  ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	
+  ul li {
+		padding-left: 15px;
+		
+	}
+	
+	ul.root {
+		list-style-image: url("./images/bullet11.jpg");
+		mask-repeat: no-repeat;
+		position: 0.8px;
+	}
+	ul.path {
+		margin-left: 20px;
+	}
+
+
+
 </style>
 </head>
 <body>
 	<ul class="root" >
+		<li >리스트 스타일</li>
 		<li>리스트 스타일</li>
-		<li>리스트 스타일</li>
-			<ul>
+			<ul class="path">
 				<li>리스트 스타일</li>
 				<li>리스트 스타일</li>
-					<ul>
+					<ul class="path">
 						<li>리스트 스타일</li>
 						<li>리스트 스타일</li>
 						<li>리스트 스타일</li>

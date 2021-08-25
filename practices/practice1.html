@@ -4,7 +4,130 @@
 <meta charset="utf-8">
 <title>테이블</title>
 
-<style type="text/css" media="screen">
+<style type="text/css" media="screen">	
+  /* 단계 1: 기본 마진과 패딩 */
+	* {
+		 padding: 0;
+		 margin: 0;
+	}
+  /* 단계 1- 2: 기본 글꼴 적용 */
+	body {
+			font-family: "맑은 고딕" , 돋움, sans-serif;
+			font-size: 0.75em; /* =75% */
+			color: #333; /* = #333333 */
+	}
+
+	.tbl-ex {
+		/* 위-아래: 10px */
+		margin: 10px auto; 
+		margin-bottom: 0px; 
+	}
+
+	/* 단계 2 */
+	.tbl-ex , th , td{ 
+		 border: 1px solid #333;  /* 테이블 생성 */
+	}
+
+	/* 단계 3 */
+	.tbl-ex {
+			border-collapse: collapse;
+	}
+  
+	/* 단계 4 */
+  th, td {
+		padding: 10px;
+	}
+
+	/* 단계 5 */
+	th {
+		background-color: #999;
+		font-size: 1.1em; /* = 110% */
+		color: #fff;
+	}
+
+	/* 단계 6 */
+	.tbl-ex, th, td {
+		border-left: 0;
+		border-right: 0;
+	}
+  
+	/* 단계 7 */
+	th {
+		border-top : 2px solid black;
+		border-bottom: 2px solid black;
+	}
+
+	/* 단계 8 */
+	td {
+		border-style: dotted;
+	}
+
+	/* 단계 10 */	
+	tr:nth-child(2n+1) {
+	background-color: #E8ECF6;
+	}
+	/* 단계 9 */
+	tr:hover {
+		background-color: #fc6;
+	}
+	
+	/* 단계 9가 적용되고 단계 10에서 덮어쓰기가 일어나기
+	   때문에 CSS 적용 순서가 중요하다! */
+  
+	/*
+	table {
+		border-collapse: collapse;  /* collapse: 셀간격 사라짐 
+		border-left: 0;
+		border-right: 0;
+	}
+
+	th {
+		border-top: 2px;
+		border-bottom: 2px;
+  }
+
+	tr th {
+     background: #999;
+		 font-size: 1.1em;
+		 color: #fff;
+		 border-top: 2px;
+		 border-bottom: 2px;
+	}
+  
+	td, th {
+		border: px solid;
+		padding: 8px;
+		border-left:0;
+	  border-right:0;
+		
+	}
+
+  td {
+		 border-bottom: 2px dotted;
+	 }
+
+  
+	.tbl-ex {
+		margin-top: 10px;
+		margin-right:auto;
+		margin-left: auto;
+		
+  }
+	
+	tr:nth-child(even) {
+		background-color: #E8ECF6;
+	}
+  
+	body {
+		font-family: 맑은고딕, 돋움;
+		font-size: 0.75em;
+		color: #333;
+	}
+
+	tr:hover {
+		background-color: #fc6;
+	}
+  */
 
 </style>
 </head>
@@ -28,7 +151,7 @@
 			<td>클래스로 정의해 준 HTML 태그</td>
 			<td>IE4, FF1,Safari 1, 크롬 1,오페라 3.5, CSS1</td>
 		</tr>
-		<tr>
+		<tr >
 			<td>a.classname</td>
 			<td>종속 클래스</td>
 			<td>특정 HTML 태그에 종속된 클래스</td>
