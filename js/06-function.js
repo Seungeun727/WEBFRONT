@@ -113,5 +113,3 @@ console.log(f3Arrow(7,5));
 
 // 콜백함수를 전달할 때 활용
 usingCallback(10, 20, (v1, v2) => { console.log(v1 + v2) });
-
-
