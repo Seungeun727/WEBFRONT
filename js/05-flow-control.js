@@ -77,8 +77,8 @@ let obj = {
     job: "도적",
     gender: "남성"
 }
-console.log("==== for ... in");
 
+console.log("==== for ... in");
 for(let key in obj) {
     // for ... in : 객체의 속성을 순회
     console.log(key, "->", obj[key]);

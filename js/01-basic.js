@@ -31,6 +31,7 @@ console.log(Math.max(1, 3, 2, 4, 9, 5))
 
 console.log("------------");
 
+
 // var, let, const
 var testVar = 10;   // 전통적 할당 방법 : 가급적 var 사용을 지양.
 
