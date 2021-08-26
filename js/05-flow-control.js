@@ -95,6 +95,7 @@ for(let value of arr) {
     console.log(value);
 }
 
+
 // for... of 는 순회 객체(배열 등)에서만 사용
 // for (let value of obj){
     // console.log(value);
