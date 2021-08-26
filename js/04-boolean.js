@@ -27,5 +27,5 @@ let content = "CONTENTS";
 console.log(true && content);
 console.log(false && content);
 
-console.log(true || content);
-
+console.log(true || content);   // -> true
+console.log(false || content);  //  -> contents 선택
