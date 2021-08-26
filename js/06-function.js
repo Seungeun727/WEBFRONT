@@ -88,4 +88,30 @@ usingCallback(7, 5, function(v1,v2) {
     console.log(v1 * v2);  // 실행 로직을 호출시 주입
 });
 
+//  화살표 함수:  =>
+// 매개 변수 없는 경우
+const f1 = function() { return "hello"}; //  스코프 this 다르다
+const f1Arrow = () => "hello";   // 스코프 this 다르다   // 매개 변수가 없을 시 ()로 해준다.
+// 독자 스코프 (x)
+
+console.log(f1(), typeof f1);
+console.log(f1Arrow(), typeof f1Arrow);
+
+// 매개변수가 단일인 경우
+const f2 = function(name) { return "hello" + name};
+const f2Arrow = name => "Hello" + name;   // 매개 변수가 있는 경우 ()안해도 된다.
+
+console.log(f2("홍길동"));
+console.log(f2Arrow("홍길동"));
+
+// 매개 변수가 여러 개인 경우
+const f3 = function(a,b) { return a + b };
+const f3Arrow =  (a,b) => a + b;
+
+console.log(f3(7,5));
+console.log(f3Arrow(7,5));
+
+// 콜백함수를 전달할 때 활용
+usingCallback(10, 20, (v1, v2) => { console.log(v1 + v2) });
+
 
