@@ -70,17 +70,17 @@ console.log(getNumberTotal(1, 2, "3", 4, 5));
 console.log("===== Callback");
 // 함수는 문법적 기능이 아니라, 독립된 객체
 
-function usingCallback(val1, val2, func) {
+function usingCallback(val1, val2, func) {   // -> 로직 미정 상태
     // 기능을 미정 상태로 두고
     // 함수 호출시 외부로부터 실행 로직을 전달
     // 거꾸로 호출 : Callback 함수
-    if (typeof func == "function") {
+    if (typeof func == "function") {   // ->  매개변수 = func
         // 매개변수는 func이다.
-        func(val1, val2);
+        func(val1, val2); // -
     }
 }
 
-usingCallback(7, 5, function(v1,v2) {
+usingCallback(7, 5, function(v1,v2) {  // -> 매개 변수를 함수 자체로 전달함
      console.log(v1 + v2);  // 실행 로직을 주입
 });
 
