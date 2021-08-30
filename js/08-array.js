@@ -129,7 +129,23 @@ console.log("SORT(ASC):", fruits);
 fruits.sort(function(v1, v2) {
     // 반환값 0: 순번이 같다.
     if (v1 == v2) return 0;
-    if (v1 < v2) return 1;
-    if (v1 > v2) return -1;
+    if (v1 < v2) return 1;   //  : v1이 순서가 뒤다.
+    if (v1 > v2) return -1;  //  : v1이 순서가 앞이다.
 });
 console.log("SORT(User Defined:", fruits);
+
+// split: 특정 구분자를 기준으로 문자열 분리 -> Array 반환
+const str = "JavaScript is something strange than other languages";
+
+let chunks = str.split(" ");  // 문자열을 공백으로 분리
+console.log("SPLIT:", chunks);
+
+// loop 1:
+for (let i = 0; i < chunks.length; i++){
+    console.log("WORD:", chunks[i]);
+}
+
+// loop 2: for ... of
+for (let word of chunks) {
+    console.log("for of:", word);
+}
