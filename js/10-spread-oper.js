@@ -24,14 +24,15 @@ console.log("ES6 combine:", combined);
 // 배열의 전개
 console.log("===== 배열의 전개");
 console.log("원본배열:", arr1);
-var [first, second, third="empty", ...others] = arr1;
+var [first, second, third="empty", ...others] = arr1;   // : 변수 임의로 지정해도 됨
 console.log(first, second, third, others);   // 결과: 홍길동 장길산 empty []
 
 console.log("원본배열:", combined);
-var [first, second, third="empty", ...others] = combined;
+var [first, second, third="empty", ...others] = combined;    
 console.log(first, second, third, others);    // 결과: 홍길동 장길산 임꺽정 [ '전우치' ]
 
 console.log("===== 객체 전개 연산")
+// : 객체의 키나 값을 추출할 때 활용 가능함
 var obj1 = { one: 1, two: 2, other: 0}
 var obj2 = { three: 3, four: 4, other: -1}
 
