@@ -47,7 +47,7 @@ function testLogicPromise() {
 // testLogicPromise();
 
 // async/await는 Promise를 좀 더 쉽게 다룰 수 있게 해줌
-async function asyncFunction() {
+async function asyncFunc() {
     console.log("async function");
     return "SUCCESS";
 }
