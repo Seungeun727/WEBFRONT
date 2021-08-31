@@ -2,7 +2,7 @@ function testForEach() {
     // forEach() : 배열의 요소를 하나씩 콜백에 전달함
     let source = ["Banana", "Orange", "Apple", "Mango"];
     console.log("===== forEach");
-    source.forEach(item => {
+    source.forEach(item => {  
       // 콜백 함수의 인자가 1개 : 개별 요소
       console.log(item);
     })
@@ -18,6 +18,9 @@ function testForEach() {
     })
 }
 // testForEach();
+
+// :  every: 모두조건 만족 -> true
+//    some: 한 개만 만족  -> true
 
 function testSome() {
     let data = [

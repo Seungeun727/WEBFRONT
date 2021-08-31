@@ -95,4 +95,4 @@ testFunc.apply(obj, ["서울"]);  // 함수 내부의 this를 obj와 연결, 인
 
 const boundTestFunc = testFunc.bind(obj);
 // bind()는 함수 호출하지 않고 this가 새 객체로 연결된 새 함수를 반환
-boundTestFunc("서울");
+boundTestFunc("서울");   // : this === obj
