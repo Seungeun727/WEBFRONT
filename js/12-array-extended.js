@@ -51,4 +51,96 @@ function testEvery() {
 
   console.log("----- every: age > 25 ?", result);
 }
-testEvery();
+// testEvery();
+
+function testFilter() {
+  console.log("===== Filter");
+
+  let source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];   // : 조건 만족 시 새 배열에 Push
+  // source에서 짝수요소만 필터링 해보자
+
+  // 기존 방식
+  let result = [];
+  for (let i = 0; i < source.length; i++) {  // : 원본 배열의 길이 만큼 반복
+    // 판별
+    if(source[i] % 2 == 0){   // 각 배열 요소를 2로 나누면 
+      result.push(source[i]);    // 빈 배열이  저장되어 있는 변수에 추가함
+    }
+  }
+  console.log("원본:", source);
+  console.log("짝수 필터링:", result);
+
+  result = source.filter(item => item  % 2 == 0);
+  console.log("짝수 필터링(filter):", result);
+}
+// testFilter();
+
+// map
+function testMap() {
+  console.log("===== map");
+  let source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  console.log("원본:", source);
+
+  // 모든 요소를 *2 한 새 배열을 만들어라 
+  // 기존 방식
+  let multiply = [];
+  for (let i = 0; i < source.length; i++) {
+    multiply.push(source[i] * 2);
+  }
+  console.log("요소 계산:", multiply);
+
+  // map 함수 활용
+  mutiply = source.map(item => item * 2);
+  console.log("배열 곱셈(map):", multiply);
+}
+// testMap();
+
+// reduce:  reduce는 배열 자체를 변형 -> 내부값을 수집 -> 최종결과
+/*
+const numArr = [1, 2, 3, 4, 5];
+
+const result = numArr.reduce((acc, el) => {
+  return acc + el   // : acc: 누적값, el: 현재 요소값
+}, 0);
+
+console.log(result);
+*/
+
+
+// reduce
+function testReduce() {
+    let source = [12, 4, 19, 33, 86];
+    // callback
+    //    acc: 직전까지의 누산값
+    //    value: 현재요소의 값
+    //    idx: 현재요소의 인덱스
+    //    arr: 누산에 사용되는 배열 자체
+    let sum = source.reduce((acc, value, idx, arr) => {
+        console.log(`${arr}의 ${idx}번째 요소는 ${value}`);
+
+        // 직전 누산값과 현재 누산값을 연산하여 리턴
+        return acc + value;
+    }, 0);    // 초기값
+
+    console.log("원본:",source);
+    console.log("누계값(reduce)", sum);
+}
+// testReduce();
+
+function testReduce2() {
+    // map 함수를 reduce 함수로 시뮬레이션
+    let source = [12, 4, 19, 33, 86];
+    // 요소를 받아와서 짝수면 짝수, 홀수면 홀수
+    // 내부 요소를 변경
+    console.log("원본:", source);
+    let result = source.reduce((acc, value) => {
+       console.log(`현재 누산기: ${acc}`);
+       console.log(`${value}는  ${value % 2 == 0 ? "짝수": "홀수"}`);
+       acc.push(value % 2 == 0 ? "짝수" : "홀수");
+
+       return acc;  // 초기값
+    }, []);
+    console.log(result);
+}
+
+testReduce2();
