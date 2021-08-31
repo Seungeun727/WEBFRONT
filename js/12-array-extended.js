@@ -144,3 +144,23 @@ function testReduce2() {
 }
 
 testReduce2();
+
+// [] 배열의 요소를 짝수만 필터링해서 내부 데이터 * 2를 하고 합계를 출력해보시오.
+// 조건: filter 함수를 통과시키면 배열이 바로 나오도록 
+// 과정: Filter -> Map -> Reduce
+function filterMapReduce() {
+  let source = [12, 7, 3, 8, 4, 9, 6, 2];
+  /* 배열 source 배열에서 짝수만 필터링 : .fliter
+  내부 요소를2 2배 : .map
+  합산: reduce
+  */
+  let result =
+  source.filter(item => item % 2 == 0)    // 짝수만 필터링
+      .map(item => item * 2)  // 내부 데이터 * 2
+      .reduce((acc, value) => {   // 합산
+      return acc + value;
+      },0);
+  console.log("Result:", result);
+    
+} 
+filterMapReduce();
