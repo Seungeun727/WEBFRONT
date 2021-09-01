@@ -1,166 +1,158 @@
 function testForEach() {
-    // forEach() : 배열의 요소를 하나씩 콜백에 전달함
-    let source = ["Banana", "Orange", "Apple", "Mango"];
-    console.log("===== forEach");
-    source.forEach(item => {  
-      // 콜백 함수의 인자가 1개 : 개별 요소
+  //  forEach 메서드: 배열의 요소를 하나씩 콜백에 전달
+  let source = ["Banana", "Orange", "Apple", "Mango"];
+  console.log("===== forEach");
+  source.forEach(item => {
+      //  콜백 함수의 인자가 1개: 개별 요소
       console.log(item);
-    })
+  });
 
-    source.forEach((item, index) => {
-      // 콜백 함수의 인자가 2개 : 개별 요소, 배열 내의 인덱스
+  source.forEach((item, index) => {
+      //  콜백 함수의 인자가 2개: 개별 요소, 배열 내의 인덱스
       console.log(`${index}번째 요소 ${item}`);
-    })
+  })
 
-    source.forEach((item, index, arr) => {
-      // 콜백 함수의 인자가 3개: 개별 요소, 인덱스, 배열 자체
+  source.forEach((item, index, arr) => {
+      //  콜백 함수의 인자가 3개: 개별 요소, 인덱스, 배열 자체
       console.log(`배열 ${arr}의 ${index}번째 요소 ${item}`);
-    })
+  })
 }
 // testForEach();
 
-// :  every: 모두조건 만족 -> true
-//    some: 한 개만 만족  -> true
-
 function testSome() {
-    let data = [
+  let data = [
       { name: "홍길동", age: 28 },
       { name: "장길산", age: 35 },
-      { name: "전우치", age: 25 },
-    ]
+      { name: "전우치", age: 25 }
+  ]
 
-    let result = data.some(x => {
+  //  some, any: 조건을 만족하는 데이터가 1개 이상 있을 때
+  let result = data.some(x => {
       return x.age > 25;
-    })
+  })
 
-    console.log("-----------some: age > 25 ?", result);
+  console.log("---------- some: age > 25 ?", result);
 }
 // testSome();
 
 function testEvery() {
   let data = [
-    { name: "홍길동", age: 28 },
-    { name: "장길산", age: 35 },
-    { name: "전우치", age: 25 },
+      { name: "홍길동", age: 28 },
+      { name: "장길산", age: 35 },
+      { name: "전우치", age: 25 }
   ]
-  
-  // every: 모든 요소가 콜백 함수의 조건을 만족시킬 때 true
+
+  //  every: 모든 요소가 콜백 함수의 조건을 만족시킬 때 true
   let result = data.every(x => {
-    return x.age > 25;
+      return x.age > 25;
   });
 
   console.log("----- every: age > 25 ?", result);
 }
-// testEvery();
+ //testEvery();
 
 function testFilter() {
-  console.log("===== Filter");
+  console.log("----- Filter");
 
-  let source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];   // : 조건 만족 시 새 배열에 Push
-  // source에서 짝수요소만 필터링 해보자
+  let source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  //  source에서 짝수요소만 필터링 해 보자
 
-  // 기존 방식
+  //  기존 방식
   let result = [];
-  for (let i = 0; i < source.length; i++) {  // : 원본 배열의 길이 만큼 반복
-    // 판별
-    if(source[i] % 2 == 0){   // 각 배열 요소를 2로 나누면 
-      result.push(source[i]);    // 빈 배열이  저장되어 있는 변수에 추가함
-    }
+  for (let i = 0; i < source.length; i++) {
+      //  판별
+      if (source[i] % 2 == 0) {
+          result.push(source[i]);
+      }
   }
   console.log("원본:", source);
   console.log("짝수 필터링:", result);
 
-  result = source.filter(item => item  % 2 == 0);
+  result = source.filter( item => item % 2 == 0 );
   console.log("짝수 필터링(filter):", result);
 }
 // testFilter();
 
-// map
+
+function testFilter2() {
+  let source = [1,2, 3,4 ,5, 6, 7, 8, 9,10];
+
+  let result= [];
+  console.log("원본배열:", source);
+  result= source.filter(a => a % 2 == 0);
+  console.log("짝수 필터링:", result);
+}
+//testFilter2();
+
 function testMap() {
   console.log("===== map");
-  let source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let source = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
   console.log("원본:", source);
 
-  // 모든 요소를 *2 한 새 배열을 만들어라 
-  // 기존 방식
+  //  모든 요소를 *2 한 새 배열을 만들어라
+  //  기존 방식
   let multiply = [];
-  for (let i = 0; i < source.length; i++) {
-    multiply.push(source[i] * 2);
+  for (let i = 0; i <source.length; i++) {
+      multiply.push(source[i] * 2);
   }
   console.log("요소 계산:", multiply);
 
-  // map 함수 활용
-  mutiply = source.map(item => item * 2);
+  //  map 함수 활용
+  multiply = source.map(item => item * 2);
   console.log("배열 곱셈(map):", multiply);
 }
-// testMap();
+//testMap();
 
-// reduce:  reduce는 배열 자체를 변형 -> 내부값을 수집 -> 최종결과
-/*
-const numArr = [1, 2, 3, 4, 5];
-
-const result = numArr.reduce((acc, el) => {
-  return acc + el   // : acc: 누적값, el: 현재 요소값
-}, 0);
-
-console.log(result);
-*/
-
-
-// reduce
 function testReduce() {
-    let source = [12, 4, 19, 33, 86];
-    // callback
-    //    acc: 직전까지의 누산값
-    //    value: 현재요소의 값
-    //    idx: 현재요소의 인덱스
-    //    arr: 누산에 사용되는 배열 자체
-    let sum = source.reduce((acc, value, idx, arr) => {
-        console.log(`${arr}의 ${idx}번째 요소는 ${value}`);
+  let source = [12, 4, 19, 33, 86];
+  //  callback 
+  //      acc: 직전까지의 누산값
+  //      value: 현재요소의 값
+  //      idx: 현재요소의 인덱스
+  //      arr: 누산에 사용되는 배열 자체
+  let sum = source.reduce((acc, value, idx, arr) => {
+      console.log(`이전 값은 ${acc}`);
+      console.log(`${arr}의 ${idx}번째 요소는 ${value}`);
 
-        // 직전 누산값과 현재 누산값을 연산하여 리턴
-        return acc + value;
-    }, 0);    // 초기값
+      //  직전 누산값과 현재 누산값을 연산하여 리턴
+      return acc + value;
+  }, 0 ); //  초깃값
 
-    console.log("원본:",source);
-    console.log("누계값(reduce)", sum);
+  console.log("원본:", source);
+  console.log("누계값(reduce):", sum);
 }
-// testReduce();
+ testReduce();
 
 function testReduce2() {
-    // map 함수를 reduce 함수로 시뮬레이션
-    let source = [12, 4, 19, 33, 86];
-    // 요소를 받아와서 짝수면 짝수, 홀수면 홀수
-    // 내부 요소를 변경
-    console.log("원본:", source);
-    let result = source.reduce((acc, value) => {
-       console.log(`현재 누산기: ${acc}`);
-       console.log(`${value}는  ${value % 2 == 0 ? "짝수": "홀수"}`);
-       acc.push(value % 2 == 0 ? "짝수" : "홀수");
+  //  map 함수를 reduce 함수로 시뮬레이션
+  let source = [12, 4, 19, 33, 86];
+  //  요소를 받아와서 짝수면 짝수, 홀수면 홀수
+  //  내부 요소를 변경 
+  console.log("원본:", source);
+  let result = source.reduce((acc, value) => {
+      console.log(`현재 누산기: ${acc}`);
+      console.log(`${value}는 ${value % 2 == 0 ? "짝수": "홀수"}`);
+      acc.push(value % 2 == 0 ? "짝수": "홀수");
 
-       return acc;  // 초기값
-    }, []);
-    console.log(result);
+      return acc;
+  }, []); //  초깃값
+  console.log(result);
 }
+// testReduce2();
 
-testReduce2();
-
-// [] 배열의 요소를 짝수만 필터링해서 내부 데이터 * 2를 하고 합계를 출력해보시오.
-// 조건: filter 함수를 통과시키면 배열이 바로 나오도록 
-// 과정: Filter -> Map -> Reduce
 function filterMapReduce() {
-  let source = [12, 7, 3, 8, 4, 9, 6, 2];
-  /* 배열 source 배열에서 짝수만 필터링 : .fliter
-  내부 요소를2 2배 : .map
-  합산: reduce
+  let source = [12, 7, 3, 8, 4, 9, 6, 2, 15, 14];
+  /* 목표
+  source 배열에서 짝수만 필터링 : .filter
+  내부 요소를 2배 : .map
+  합산 : .reduce
   */
-  let result =
-  source.filter(item => item % 2 == 0)    // 짝수만 필터링
-      .map(item => item * 2)  // 내부 데이터 * 2
-      .reduce((acc, value) => {   // 합산
-      return acc + value;
-      },0);
+  let result = 
+      source.filter(item => item % 2 == 0)
+          .map(item => item * 2)
+          .reduce((acc, value) => {
+          return acc + value;
+      }, 0);
   console.log("Result:", result);
-    
-} 
-filterMapReduce();
+}
+// filterMapReduce();

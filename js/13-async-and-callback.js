@@ -26,7 +26,7 @@ function logicPromise() {
       // resolve: 성공했을 때 값을 전달
       // reject: 실패했을 때 사유를 전달
       setTimeout(() => {
-        resolve("Success");   // 비동기 처리에 성공하면 resolve 함수를 실행한다.
+        reject("REJECTED!");   // 비동기 처리에 성공하면 resolve 함수를 실행한다.
       }, 2000);
       console.log("end logicPromise");
     });
@@ -35,7 +35,7 @@ function logicPromise() {
 function testLogicPromise() {
   console.log("Test Logic Promise");
   logicPromise()  // : 비동기 수행 결과
-    .then(value =>{  // : 콜백으로 전달
+    .then(value => {  // : 콜백으로 전달
       // 성공했을 때
       console.log("PROMISE SUCCESS:", value);
     }) 
