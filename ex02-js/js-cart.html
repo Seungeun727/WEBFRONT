@@ -64,9 +64,12 @@
 
                 toolbar.appendChild(delBtn);
                 itemNode.appendChild(toolbar);
-
-                // cmfldp cnrk
-                container.appendChild(itemNode);
+                
+                // 트리에 추가
+                let firstItem = container.children[0];
+                // 기준이 되는 노드
+                container.insertBefore(itemNode, firstItem);
+                //container.appendChild(itemNode);
             }
 
             ItemInput.value = "";
