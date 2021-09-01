@@ -28,4 +28,60 @@
             &copy;Bit Academy
         </div>
     </body>
+    <script>
+        function addItem(event) {
+            console.log(event);
+            let itemInput = document.getElementById("item");
+            let item = itemInput.value.trim();
+
+            if (item.length > 0) {
+                // 새 노드를 생성
+                // ul#list에 자식으로 추가
+                // 부모 찾기
+                let container = document.getElementById("list");
+                // li 노드 생성
+                let itemNode = document.createElement("li");
+                // 속성과 콘텐츠 설정
+                itemNode.innerHTML = item;
+                
+                let toolbar = document.createElement("div");
+                toolbar.style.display = "inline";
+                let delBtn = document.createElement("button");
+                delBtn.innerText ="삭제";
+                delBtn.style.cssFloat ="right";
+
+                delBtn.addEventListener("click", function(event) {
+                    // 삭제할 요소
+                    let removeItem = event.target.parentNode.parentNode;
+                    console.log("삭제할 요소:", removeItem);
+
+                    // 부모 요소찾기
+                    let parent = removeItem.parentNode;
+
+                    // 부모로부터 자식 분리
+                    parent.removeChild(removeItem);
+                });
+
+                toolbar.appendChild(delBtn);
+                itemNode.appendChild(toolbar);
+
+                // cmfldp cnrk
+                container.appendChild(itemNode);
+            }
+
+            ItemInput.value = "";
+            itemInput.focus();
+        }
+        window.addEventListener("load", function(event) {
+            // 추가 버튼을 눌렀을 때의 이벤트 연결
+            document.getElementById("btn-add")
+                .addEventListener("click", addItem);
+
+            // 리스트 초기화
+            let items = document.querySelectorAll("#list > li");
+            for (let i = 0;i< items.length; i++){
+                items[i].parentNode.removeChild(items[i]);
+            }
+        })
+    </script>
 </html>
