@@ -1,9 +1,10 @@
 // Shadow DOM 간략 정리 
 
 // Shadow DOM
-// 1. 외부에 노출되지 않는 DOM
-// 2. 글로벌에 영향 받지 않는 독립적인 요소 생성시 사용함
-
+// 1. 외부에 노출되지 않는 DOM => 캡슐화 역할
+// 2. 글로벌에 영향 받지 않는 독립적인 요소 생성시 사용함 => 모듈화
+// 3. DOM 내 요소에 붙이며 DOM이 없다면 Shadow Dom도 존재하지 않음.
+// 4. shadow host를 만나는 순간에 shadow DOM 렌더링된다.
 
 // Shadow DOM 용어 
 // 1) Shadow host: Shadow DOM이 부착된 DOM 노드
@@ -66,3 +67,23 @@ spanEl.innerHTML =
     </style>
     <span>MANGO</span> `; 
 divEl3.attachShadow({mode: 'open'}).appendChild(spanEl);  
+
+// 캡슐화
+const shadow = document.querySelector('#element');
+const text4 = document.createElement('span');
+
+text4.innerHTML = `
+  <style>
+    span {
+      color: purple;
+      font-size: 30px; 
+      font-weight: bold;
+    }
+  </style>
+  <span>shadow DOM 캡슐화 공부</span>
+`;
+
+shadow.attachShadow({mode: 'open'}).appendChild(text4);
+console.log(shadow.shadowRoot);                                   // #shadow-root (open)
+console.log(shadow.shadowRoot.querySelectorAll('span'));          // NodeList(2) [span, span]
+console.log(shadow.shadowRoot.querySelectorAll('span').length);   // 2
