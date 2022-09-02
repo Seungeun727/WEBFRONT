@@ -1,0 +1,132 @@
+body {
+  padding: 0;
+  background: beige;
+}
+
+/* button {
+  all: unset;
+} */
+
+.btn {
+  width: auto;
+  height: 35px; 
+  padding: 8px;
+}
+
+/* 기본 버튼 지정 */
+.btn--primary {
+  background-color: #0c6af7;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  border-radius: 2px;
+}
+
+/* 테두리 버튼 지정 */
+.btn--outline--white {
+  outline: 0;
+  color: #333;
+  border: 1px solid #fff;
+  border-radius: .2rem;
+  box-shadow: 2px 2px #00000a05;
+  background-color: #fff;
+}
+
+.btn--outline--red {
+  outline: 0;
+  color: #f12828;
+  border: 1px solid #f12828;
+  border-radius: .2rem;
+  background-color: #fff;
+}
+
+.btn--outline--green {
+  outline: 0;
+  color: #14ac14;
+  border: 1px solid #14ac14;
+  border-radius: .2rem;
+  background-color: #fff;
+}
+
+/* 비활성화 버튼 지정 */
+.btn--disabled {
+  opacity: 0.4;
+}
+
+
+/* 라운드 버튼 지정 */
+.btn--round {
+  outline: 0;
+  border: 0;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.btn--round:hover {
+  border: 1px solid #333;
+  color: #333;
+}
+
+/* 사각형 버튼 지정 */
+.btn--square {
+  outline: 0;
+  border: 0;
+  border-radius: .2rem;
+  color: #fff;
+}
+
+/* 그라디언트 버튼 지정 */
+.btn--grdiant--yellow {
+  outline: 0;
+  border: 0;
+  background: linear-gradient(to right,#fccc74, #f5f576);
+}
+
+.btn--grdiant--green {
+  outline: 0;
+  border: 0;
+  background: linear-gradient(#74fcf5, #7eeb96);
+}
+
+.btn--grdiant--purple {
+  outline: 0;
+  border: 0;
+  background: linear-gradient(to right,#74aafc, #d17eeb);
+}
+
+.btn--grdiant--pink {
+  outline: 0;
+  border: 0;
+  background: linear-gradient(to left, #f06f85, #f52346);
+}
+
+/* button 색 지정 */
+.btn--white {
+  color: #0c6af7;
+  background-color: #fffefe;
+}
+
+.btn--black {
+  background-color: black;
+}
+
+.btn--black:hover {
+  color: black;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+.btn--red {
+  background-color: #f12828;
+}
+
+.btn--yellow {
+  background-color: #ffc400;
+}
+
+.btn--lblue {
+  background-color: #6ac3fa;
+}
+
+.btn--navy {
+  background-color: #14143f;
+}
