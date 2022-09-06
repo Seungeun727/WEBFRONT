@@ -1,0 +1,49 @@
+/* 타입 선택자  */
+body {
+  margin: 0;
+}
+header {
+  color: red;
+}
+header h2 {
+  color: blue;
+}
+footer p {
+  color: green;
+}
+
+ul {
+  list-style: none;
+}
+
+.list {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  /* border: 1px solid #ccc; */
+}
+
+/* 클래스 선택자  */
+.item {
+  color: red;
+  border: 1px solid #ccc;
+}
+
+.item:nth-child(1) {
+  color: purple;
+}
+
+.item:nth-child(2) {
+  color: green;
+}
+
+.item:nth-child(3) {
+  color: blue;
+}
+
+/* id 선택자 */
+#footer {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(74, 74, 124);
+}
