@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background-color: pink;
+}
+
+p {
+  color: brown;
+}
+
+header {
+  color: navy;
+}
+
+li {
+  color: #ffc400;
+  list-style: none;
+}
+
+#text {
+  border: 1px solid #ccc;
+  font-size: 50px;
+  font-style: italic;
+}
+
+#id {
+  color: pink;
+}
+
+.check {
+  background-color: lightcoral;
+}
+
+.header {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffc400;
+  background-color: rgb(224, 76, 224);
+}
+
+#content {
+  margin: 30px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 2px 2px #00000a3f;
+}
+
+.paragraph {
+  padding: 5px;
+  font-size: 30px;
+  font-style: italic;
+  color: #be168c;
+  border-bottom: 1px solid #ccc;
+}
+
+.list {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
