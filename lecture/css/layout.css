@@ -1,0 +1,99 @@
+/* html과 body태그의 margin, padding 초기화 */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+  border: 10px solid red;
+  /* padding-left: border 안쪽의 왼쪽 여백 설정 */
+  padding-left: 100px;  
+  /* margin-left: border 바깥쪽의 왼쪽 여백 설정 */
+  margin-left: 100px;
+}
+
+.block1 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  margin-top: 100px;
+  display: inline;
+}
+
+.inline1 {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  /* margin-top: 100px; */
+  display: block;
+}
+
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #3064a8;
+}
+
+#left {
+  width: 200px;
+  height: 200px;
+  background-color: #455881;
+  float: left;
+}
+
+/* 겹치지 않기 위해 float 연속 정렬한다. */
+#role {
+  width: 300px;
+  height: 200px;
+  background-color: #5d7dac;
+  float: left;
+}
+
+#next {
+  width: 200px;
+  height: 200px;
+  background-color: #253b58;
+  float: right;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: beige;
+  clear: both;
+}
+
+/* 부모-자식 관계 margin: 부모 요소, 자식요소도 영향을 받는다. */
+.card {
+  width: 100%;
+  height: 400px;
+  background-color: #ce8b6c;
+  margin-top: 100px;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  margin-top: 150px;
+}
+
+/* 형제 관계 margin: margin 값이 큰 요소로 결정된다. */
+.item1 {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin-bottom: 150px;
+}
+
+.item2 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  margin-top: 200px;  
+  /* margin 값이 .item2가 더 크므로 200px로 결정된다. */
+}
