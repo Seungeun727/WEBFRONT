@@ -59,15 +59,23 @@ footer {
 }
 
 #sidebar {
-  width: 10%;
+  width: 300px;
+  height: 100%;
   display: none;
   transition: all ease 2s;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  right: 0;
 }
 
 #sidebar nav {
   padding: 10px;
 }
 
+#sidebar nav li a{
+  color: #333;
+}
 #search {
   float: right;
   text-align: center;
