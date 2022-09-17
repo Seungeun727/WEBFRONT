@@ -49,6 +49,10 @@ article {
   margin-bottom: 30px;
 }
 
+button {
+  padding: 0;
+  margin: 0;
+}
 footer {
   clear: both;
   width: 100%;
@@ -76,6 +80,11 @@ footer {
 #sidebar nav li a{
   color: #333;
 }
+
+#sidebar nav li a:hover{
+  color: #3a3aee;
+}
+
 #search {
   float: right;
   text-align: center;
@@ -99,7 +108,25 @@ footer {
   flex: 1;
 }
 
+.inner__right li, button .menu-btn{
+  align-items: center;
+}
+
 .inner__right li a {
   padding: 10px;
 }
 
+.menu-btn {
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+  font-size: 18px;
+}
+.close-btn {
+  padding: 5px;
+  border: 0;
+  outline: 0;
+  float: right;
+  font-size: 20px;
+}
