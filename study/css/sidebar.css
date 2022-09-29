@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -30,25 +31,19 @@ a {
 
 main {
   padding-top: 90px;
-  height: 900px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 section {
   padding: 30px;
   width: 100%;
+  height: 900px;
   float: left;
   background-color: #F8F9FA;
-}
-
-article {
-  padding: 10px;
-  height: 700px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 2px 2px #00000a11;
-  margin-bottom: 30px;
+  text-align: center;
 }
 
 button {
@@ -59,13 +54,14 @@ button {
 footer {
   clear: both;
   width: 100%;
-  height: 300px;
+  height: 150px;
   bottom: 0;
   background-color: #F8F9FA;
   text-align: center;
 }
 
 #sidebar {
+  position: relative;
   width: 300px;
   height: 100%;
   display: none;
@@ -158,6 +154,8 @@ footer {
   border-radius: 10px;
   box-shadow: 2px 2px #00000027;
   font-weight: 600;
+  text-align: left;
+  padding-left: 2px;
 }
 
 /* item 홀수만 색깔 변경 */
@@ -231,4 +229,8 @@ footer {
   width: 600px;
   height: 600px;
   background-color: #fff;
+}
+
+.description {
+  padding-top: 45px;
 }
